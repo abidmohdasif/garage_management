@@ -1,4 +1,7 @@
-garage1 = { "capacity": 10, "cars": {} }
+garage1 = { 
+    "capacity": 10,
+     "cars": {"12345",}
+ }
     
 def enter_garage(garage, car_id, entry_hour):
     if not isinstance(entry_hour, (int)):
