@@ -1,9 +1,9 @@
 import pytest
-from garage import calculate_fee
+from garage import calculate_fee, enter_garage
 
-
-# def test_enter_garage_new_car():
-#     assert enter_garage(garage1, 12345, 2) ==
+def test_enter_garage_Type_Error():
+    with pytest.raises(TypeError):
+        enter_garage("garage1", 12345, "hello")
 
 def test_calculate_fee():
     assert calculate_fee(3,2) == 6.00
