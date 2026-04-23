@@ -2,7 +2,8 @@ import pytest
 from garage import calculate_fee, enter_garage
 
 pytest.fixture
-def garage {
+def garage():
+    return {
     "cars": {}, # car_id -> entry_hour (int)
     "capacity": 10   # total number of spots        
 }
