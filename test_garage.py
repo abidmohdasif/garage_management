@@ -11,7 +11,8 @@ def test_enter_garage_Type_Error():
     with pytest.raises(TypeError):
         enter_garage("garage1", 12345, "hello")
 
-def test_enter_garage_Value_Error_car_id(): #not working
+def test_enter_garage_Value_Error_car_id():
+    garage1 = { "capacity": 10,"cars": 12345}
     with pytest.raises(ValueError):
         enter_garage("garage1",12345, 3)
 
