@@ -1,10 +1,9 @@
 import pytest
 from garage import calculate_fee, enter_garage
 
-pytest.fixture
 def garage():
     return { "capacity": 10, "cars": 10 }
-    
+
 def test_enter_garage_Type_Error():
     with pytest.raises(TypeError):
         enter_garage("garage1", 12345, "hello")
