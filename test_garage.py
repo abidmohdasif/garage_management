@@ -18,4 +18,4 @@ def test_calculate_fee_Value_Error():
 
 def test_calculate_fee_Type_Error():
     with pytest.raises(TypeError):
-        calculate_fee(hello,bye)
+        calculate_fee("hello","bye")
