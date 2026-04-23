@@ -4,8 +4,8 @@ from garage import calculate_fee, enter_garage
 
 def test_enter_garage_success(garage1):
     garage1 = { "capacity": 10,"cars": {}}
-     enter_garage(garage1,12345,9)
-     assert garage1["cars"] == {12345 : 9}
+    enter_garage(garage1,12345,9)
+    assert garage1["cars"] == {12345 : 9}
 
 def test_enter_garage_Type_Error():
     with pytest.raises(TypeError):
