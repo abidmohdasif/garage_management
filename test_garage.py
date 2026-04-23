@@ -1,3 +1,4 @@
+import pytest
 from garage import calculate_fee
 
 # garage1 = {
@@ -10,3 +11,7 @@ from garage import calculate_fee
 
 def test_calculate_fee():
     assert calculate_fee(3,2) == 6.00
+
+def test_calculate_fee_Value_Error():
+    with pytest.raises(ValueError):
+        calculate_fee(-2,3)
