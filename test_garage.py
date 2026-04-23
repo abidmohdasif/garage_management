@@ -9,4 +9,4 @@ from garage import calculate_fee
 #     assert enter_garage(garage1, 12345, 2) ==
 
 def test_calculate_fee():
-    assert calculate_fee(3,2) == 6
+    assert calculate_fee(3,2) == 6.00
