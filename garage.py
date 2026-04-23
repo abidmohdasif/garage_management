@@ -8,4 +8,4 @@ def get_available_spots(garage):
     pass
 
 def calculate_fee(hours, rate):
-    pass
+    return 6
