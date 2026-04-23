@@ -1,9 +1,10 @@
-def garage1():
-    return { "capacity": 10, "cars": 10 }
+garage1 = { "capacity": 10, "cars": {} }
     
 def enter_garage(garage, car_id, entry_hour):
     if not isinstance(entry_hour, (int)):
         raise TypeError("entry_hour is not int")
+    if car_id in garage1["cars"]:
+        raise ValueError("car is already in garage")
 
 def exit_garage(garage, car_id):
     pass
