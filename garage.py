@@ -3,7 +3,8 @@ garage = {
     "cars": {}         # car_id -> entry_hour (int)
 }
 def enter_garage(garage, car_id, entry_hour):
-    pass
+    if not isinstance(entry_hour, (int)):
+        raise TypeError("entry_hour is not int")
 
 def exit_garage(garage, car_id):
     pass
