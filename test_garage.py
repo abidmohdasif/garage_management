@@ -1,0 +1,12 @@
+from garage import calculate_fee
+
+# garage1 = {
+#     "capacity": 10,   # total number of spots
+#     "cars": {}         # car_id -> entry_hour (int)
+# }
+
+# def test_enter_garage_new_car():
+#     assert enter_garage(garage1, 12345, 2) ==
+
+def test_calculate_fee():
+    assert calculate_fee(3,2) == 6
