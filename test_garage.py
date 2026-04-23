@@ -15,3 +15,7 @@ def test_calculate_fee():
 def test_calculate_fee_Value_Error():
     with pytest.raises(ValueError):
         calculate_fee(-2,3)
+
+def test_calculate_fee_Type_Error():
+    with pytest.raises(TypeError):
+        calculate_fee(hello,bye)
