@@ -16,7 +16,7 @@ def test_enter_garage_Type_Error():
 
 def test_enter_garage_Value_Error_car_id():
     with pytest.raises(ValueError):
-         garage1 = {
+        garage1 = {
         "capacity": 10,   # total number of spots
         "cars": {}         # car_id -> entry_hour (int)
         }
