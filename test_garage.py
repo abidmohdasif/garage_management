@@ -3,8 +3,11 @@ from garage import calculate_fee, enter_garage
 
 
 def test_enter_garage_success():
-    garage1 = { "capacity": 10,"cars": {}}
-    enter_garage(garage1,12345,9)
+    garage1 = {
+    "capacity": 10,   # total number of spots
+    "cars": {}         # car_id -> entry_hour (int)
+    }
+    enter_garage(garage1,'BMW M3',9)
     assert 'BMW M3' in garage1['cars'].keys()
 
 def test_enter_garage_Type_Error():
