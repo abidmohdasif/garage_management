@@ -50,8 +50,8 @@ def test_get_avaliable_spots_non_negative():
     "capacity": 2,   # total number of spots
     "cars": {'BMW':5,  'AUDI':4}         # car_id -> entry_hour (int)
     }
-    assert get_available_spots(garage_dict) == 0
-    
+    assert get_available_spots(garage1) == 0
+
 def test_calculate_fee():
     assert calculate_fee(3,2) == 6.00
 
