@@ -1,5 +1,5 @@
 import pytest
-from garage import calculate_fee, enter_garage, exit_garage
+from garage import calculate_fee, enter_garage, exit_garage, get_available_spots
 
 
 def test_enter_garage_success():
@@ -38,6 +38,12 @@ def test_exit_garage_Key_Error():
         }
         exit_garage(garage1, 'AUDI')
 
+def test_get_avaliable_spots_success():
+    garage1 = {
+    "capacity": 5,   # total number of spots
+    "cars": {'BMW':5,  'AUDI':4}         # car_id -> entry_hour (int)
+    }
+    assert get_available_spots(garage1) == 3
 
 def test_calculate_fee():
     assert calculate_fee(3,2) == 6.00
