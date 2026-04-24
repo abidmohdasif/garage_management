@@ -8,6 +8,9 @@ def enter_garage(garage, car_id, entry_hour):
 
     if len(garage['cars']) >= garage['capacity']:
         raise ValueError("No Space for the car")
+    
+    if not isinstance(garage[car_id], (int)):
+        raise ValueError("car id is supposed to be")
 
     garage['cars'][car_id] = entry_hour
 
