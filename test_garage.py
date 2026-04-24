@@ -7,7 +7,7 @@ def test_enter_garage_success():
     "capacity": 10,   # total number of spots
     "cars": {}         # car_id -> entry_hour (int)
     }
-    enter_garage(garage_dict, 'BMW', 5)
+    enter_garage(garage1, 'BMW', 5)
     assert 'BMW' in garage1['cars'].keys()
 
 def test_enter_garage_Type_Error():
