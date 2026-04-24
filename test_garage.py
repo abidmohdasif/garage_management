@@ -3,12 +3,12 @@ from garage import calculate_fee, enter_garage
 
 
 def test_enter_garage_success():
-    garage_dict = {
+    garage1 = {
     "capacity": 10,   # total number of spots
     "cars": {}         # car_id -> entry_hour (int)
     }
     enter_garage(garage_dict, 'BMW', 5)
-    assert 'BMW' in garage_dict['cars'].keys()
+    assert 'BMW' in garage1['cars'].keys()
 
 def test_enter_garage_Type_Error():
     with pytest.raises(TypeError):
