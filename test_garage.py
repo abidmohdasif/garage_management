@@ -30,6 +30,14 @@ def test_exit_garage_success():
         exit_garage(garage1, 'BMW')
         assert 'BMW' not in garage1['cars'].keys()
 
+def test_exit_garage_Key_Error():
+    with pytest.raises(KeyError):
+    garage1 = {
+    "capacity": 1,   # total number of spots
+    "cars": {'BMW': 5}         # car_id -> entry_hour (int)
+    }
+    exit_garage(garage1, 'AUDI', 13)
+
 def test_calculate_fee():
     assert calculate_fee(3,2) == 6.00
 
